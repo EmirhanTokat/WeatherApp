@@ -83,7 +83,7 @@ class HomeScreen extends StatelessWidget {
                       "Good Morning",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 25,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -93,7 +93,7 @@ class HomeScreen extends StatelessWidget {
                         "21°C",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 55,
+                          fontSize: 45,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -193,11 +193,82 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const Padding(
-                          padding: EdgeInsets.symmetric(vertical: 5.0),
-                          child: Divider(
-                            color: Colors.grey,
-                          ),
+                      ],
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 5.0),
+                      child: Divider(
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Image.asset(
+                              "assets/13.png",
+                              scale: 8,
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Temp Max",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 3,
+                                ),
+                                Text(
+                                  "12°C",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Image.asset(
+                              "assets/14.png",
+                              scale: 8,
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Temp Min",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 3,
+                                ),
+                                Text(
+                                  "8°C",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ],
                     ),
