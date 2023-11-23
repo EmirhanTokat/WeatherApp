@@ -69,6 +69,7 @@ class HomeScreen extends StatelessWidget {
               ),
               BlocBuilder<WeatherBlocBloc, WeatherBlocState>(
                 builder: (context, state) {
+                  //if (state is WeatherBlocSuccess) {
                   return SizedBox(
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height,
@@ -76,7 +77,8 @@ class HomeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          "📍 Istanbul",
+                          //"📍 ${state.weather.areaName}",
+                          "📍 İstanbul",
                           style: TextStyle(
                               color: Colors.white, fontWeight: FontWeight.w300),
                         ),
@@ -94,6 +96,7 @@ class HomeScreen extends StatelessWidget {
                         Image.asset("assets/3.png"),
                         const Center(
                           child: Text(
+                            //"${state.weather.temperature!.celsius!.round()}°C",
                             "21°C",
                             style: TextStyle(
                               color: Colors.white,
@@ -104,6 +107,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         const Center(
                           child: Text(
+                            //state.weather.weatherMain!,
                             "THUNDERSTORM",
                             style: TextStyle(
                               color: Colors.white,
@@ -279,6 +283,9 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   );
+                  // } else {
+                  //return Container();
+                  // }
                 },
               ),
             ],
